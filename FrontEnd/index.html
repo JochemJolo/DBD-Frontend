@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead by Daylight information site</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="Killer-Front">
+        <div class="Top-Bar">
+            <div class="Left-Logo"><a href="https://shop.deadbydaylight.com"><img class="Image-Logo" src="Images/testLogo.png" alt=""></a></div>
+            <div class="Top-Text-Line"><div class="Title-Text">Killers</div></div>
+            <div class="Profile-Settings"><img onclick="VisibilityChange()" class="Profile-Logo" src="Images/tent.png" alt=""></div>
+        </div>
+
+        <div class="Middle-Container">
+            <ul class="Box-List" id="boxListsKiller"></ul>
+        </div>
+
+        <div class="Bottom-Bar">
+            <div class="Bottom-Text">
+                For more information send a message to <span class="Cursive" data-tooltip="youremail@example.com">Your Email</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Survivor-Front Hiding">
+        <div class="Top-Bar">
+            <div class="Left-Logo"><a href="https://shop.deadbydaylight.com"><img class="Image-Logo" src="Images/testLogo.png" alt=""></a></div>
+            <div class="Top-Text-Line"><div class="Title-Text">Survivor</div></div>
+            <div class="Profile-Settings"><img onclick="VisibilityChange()" class="Profile-Logo" src="Images/tent.png" alt=""></div>
+        </div>
+
+        <div class="Middle-Container">
+            <ul class="Box-List" id="boxListsSurvivor"></ul>
+        </div>
+
+        <div class="Bottom-Bar">
+            <div class="Bottom-Text">
+                For more information send a message to <span class="Cursive" data-tooltip="youremail@example.com">Your Email</span>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="itemDialog">
+        <img id="dialogImg" src="" alt="">
+        <h3 id="dialogName"></h3>
+        <button id="dialogClose">Close</button>
+    </dialog>
+    <script src="static/JavaScript/main.js"></script>
+</body>
+</html>

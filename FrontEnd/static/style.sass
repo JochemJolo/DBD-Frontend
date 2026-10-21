@@ -1,0 +1,124 @@
+body 
+    margin: 0
+    padding: 0
+    background-color: red
+    list-style: none
+
+    .Hiding
+        display: none
+    
+    .Top-Bar
+        background-color: black
+        max-height: 200px
+        min-height: 55px
+        width: 100%
+        padding: 0
+
+        .Left-Logo
+            font-size: 25px
+            position: fixed
+            left: 0
+
+            .Image-Logo
+                max-height: 150px
+                max-width: 200px
+
+        .Top-Text-Line
+            font-size: 25px
+            position: absolute
+            top: 10px
+            left: 50%
+            transform: translateX(-50%)
+            
+            .Title-Text
+                font-size: 25px
+                color: white
+
+        .Profile-Settings
+            font-size: 25px
+            position: fixed
+            right: 10px
+            top: 10px
+
+            .Profile-Logo
+                max-height: 50px
+                max-width: 50px
+
+    .Middle-Container
+        background-color: grey
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 50%
+        padding: 10px
+
+        .Box-List
+            display: grid
+            grid-template-columns: repeat(6, 1fr)
+            gap: 10px
+            list-style: none
+            margin: 0
+            padding: 0
+
+            .Box
+                background-color: lightgray
+                padding: 10px
+                align-items: center
+                display: flex
+                flex-flow: column
+
+                .Image-Box
+                    max-height: 125px
+                    max-width: 120px
+
+
+    .Bottom-Bar
+        background-color: black
+        color: white
+        position: fixed
+        bottom: 0
+        width: 100%
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .Bottom-Text
+            white-space: nowrap
+
+            .Cursive
+                font-style: italic
+                position: relative
+                cursor: pointer
+                    
+                &::after
+                    content: attr(data-tooltip)
+                    position: absolute
+                    bottom: 125%
+                    left: 50%
+                    transform: translateX(-50%)
+                    background-color: grey
+                    color: white
+                    padding: 4px 8px
+                    border: 2px solid black
+                    border-radius: 20px
+                    white-space: nowrap
+                    font-style: normal
+                    opacity: 0
+                    visibility: hidden
+                    transition: opacity 0.2s
+
+                &:hover::after
+                    opacity: 1
+                    visibility: visible
+
+    #itemDialog
+        border: none
+        border-radius: 12px
+        max-width: 250px
+        padding: 24px
+        text-align: center
+
+    #itemDialog::backdrop
+        background: rgba(0, 0, 0, 0.6)
